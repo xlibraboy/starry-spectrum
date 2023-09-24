@@ -1,0 +1,14 @@
+---
+const { title } = Astro.props
+---
+<div id="content-wrapper">
+  
+  <h1>{title}</h1>
+  <slot />  <!-- children will go here -->
+  <slot /> 
+  <slot name="end-slot"/> 
+  <slot>
+    <p>This is my fallback content, if there is no child passed into slot</p>
+  </slot>
+ 
+</div>

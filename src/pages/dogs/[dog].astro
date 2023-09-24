@@ -1,0 +1,33 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import GreetingHeadline from '../../components/GreetingHeadline.astro'
+export function getStaticPaths() {
+  return [
+    {params: {dog: 'clifford'}},
+    {params: {dog: 'rover'}},
+    {params: {dog: 'spot'}},
+  ];
+}
+
+const { dog } = Astro.params;
+
+---
+<div>Good dog, {dog}!</div>
+
+<Layout title="Jempol Eksis">
+	<main>
+		</svg>
+		<h1>Welcome to <span class="text-gradient">Jempol Eksis</span></h1>
+		<p class="instructions">
+			Product menarik di bawah, silahkan dipilih ya<br />
+		</p>
+
+        <h1>Greeting Card</h1>
+        <GreetingHeadline greeting="Hi" name={dog} />
+        <p>I hope you have a wonderful day!</p>
+
+        <p>Read more <a href="/about/">about</a> Astro!</p>
+		
+		</ul>
+	</main>
+</Layout>
